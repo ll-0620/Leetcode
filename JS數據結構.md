@@ -57,3 +57,73 @@ console.log(`你正在閱讀${book.name}`)
 **函數的參數默認值**
 
 **聲明展開和剩餘參數**
+
+## 數組
+**初始化**
+```
+let temp=new Array(); 
+let temp1=[];
+let week=new Array(7);
+let day=new Array('mon','tue','wed','thus','fri','sat','sun');
+let day1=['mon','tue','wed','thus','fri','sat','sun'];
+```
+**使用push方法**
+數值插入數組尾部 `number.push(7, 8)`
+
+或是賦值給最後一個空位上的元素 `number[number.length] = 6`
+
+**使用unshift方法**
+數值插入數組開頭 `number.unshift(-1, 0)`
+
+**使用pop方法**
+刪除數組中最後一位元素 `number.pop()`
+
+**使用shift方法**
+刪除數組中第一位元素 `number.shift()`
+
+#### 通過shift和unshift方法，就可以模擬基本的對列數據結構!
+
+**常用的數組方法:**
+![數組方法](/js-image/array_methods.png "數組方法")
+
+
+*迭代器函數*
+1. `every()` 迭代數組中每個元素，直到返回false
+2. `some()` 迭代數組中每個元素，直到返回true
+3. `forEach()` 迭代整個數組，和for循環作用一樣
+4. `map()` 迭代整個數組，並返回一個新數組，由返回值組成
+5. `filter()` 迭代整個數組，返回一個新數組，由函數返回為true的元素組成
+6. `reduce()` 
+
+**ES6新增的數組功能:**
+![數組方法es6+](/js-image/array_es6+.png "數組方法es6")
+
+1. `for...of`
+2. `@@interator`
+3. `entires、keys、values`
+4. `from()` 根據已有數組創建一個新數組
+5. `of()` 根據傳入參數創建一個新數組
+6. `fill(value, start, end)` 用靜態值填充函數
+  ```
+  let ones = Array(6).fill(1); //[1,1,1,1,1,1]
+  ```
+7. `copyWithin()`
+
+**排序**
+1. `sort()` 正序 ***注意使用方式:** `number.sort((a,b)=>a-b)`
+2. `reverse()` 倒序
+   
+**搜索**
+1. `indexOf()` 返回与参数匹配的第一个元素的索引；
+2. `lastIndexOf()` 返回与参数匹配的最后一个元素的索引。
+
+\*ES6\
+3. `find()`\
+4. `findIndex()`
+
+\*ES7\
+5. `includes()`
+
+**others**
+1. `toString()` 數組轉字符串
+1. `join()` 數組轉字符串，改變逗號對應的值
