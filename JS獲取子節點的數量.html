@@ -1,0 +1,55 @@
+ <!-- JS獲取子節點的數量
+1. childNodes: 會把非空的文本節點當成節點
+2. Children: 只顯示元素節點 即使是非空的文字節點也不顯示。 
+3. NodeType: 節點類型。
+  nodeType=3 文本節點
+  nodeType=1 元素節點
+Examples: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    window.onload=function(){
+      var oUl=document.getElementById("ul");
+      var span1=document.getElementById("span1");
+      var span2=document.getElementById("span2");
+      var span3=document.getElementById("span3");
+      var sum=0;
+
+      span1.innerHTML=oUl.children.length+"";
+      span2.innerHTML=oUl.childNodes.length+"";
+      for(var i=0;i<oUl.childNodes.length;i++){
+        console.log(oUl.childNodes[i])
+        if(oUl.childNodes[i].nodeType==1){
+          sum++;
+        }
+      }
+      span3.innerHTML=sum+"";
+
+    }
+  </script>
+</head>
+<body>
+  <ul id="ul">
+    <li>aaa</li>
+    <li>bbb</li>
+    ccc
+  </ul>
+  
+  1. children顯示的節點數：
+  <span id="span1"></span>
+  <br/>
+  
+  2. chileNodes顯示的節點數：
+  <span id="span2"></span>
+  <br/>
+  
+  3. nodeType為1的節點數：
+  <span id="span3"></span>
+  <br/>
+</body>
+</html>
