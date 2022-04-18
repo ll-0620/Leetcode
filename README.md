@@ -1,3 +1,3 @@
 # leetcode
-prepare for intern !!
-try using JavaScript to solve the qusetion
+prepare for intern !! fighting
+trying to learn how to use JavaScript to solve qusetions.

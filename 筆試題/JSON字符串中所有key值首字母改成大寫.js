@@ -46,3 +46,11 @@ let json = {
 // JSON.parse() JSON轉為Object
 
 console.log(toUpperCase1(JSON.stringify(json)))
+
+console.log(123 + '')
+console.log([1, 2, 3] + '')
+
+console.log(NaN==NaN)
+console.log(NaN === NaN)
+console.log(0/0)
+console.log(100/0)
